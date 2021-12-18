@@ -1,0 +1,14 @@
+# /etc/logrotate.d/PatrickStar
+# $Id$
+
+/var/log/PatrickStar/alert /var/log/PatrickStar/*log /var/log/PatrickStar/*/alert /var/log/PatrickStar/*/*log  {
+    daily
+    rotate 7
+    missingok
+    compress
+    sharedscripts
+    postrotate
+	/etc/init.d/PatrickStard restart 1>/dev/null || true
+    endscript
+}
+

@@ -1,0 +1,17 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+bindir=@bindir@
+libdir=@libdir@
+includedir=@includedir@
+datarootdir=@datarootdir@
+datadir=@datadir@
+mandir=@infodir@
+infodir=@infodir@
+
+Name: PatrickStar
+Description: PatrickStar dynamic plugins/detection/rules
+URL: www.PatrickStar.org
+Version: @VERSION@
+Libs: -L${libdir} -lcurl @LDFLAGS@ @LIBS@
+Cflags: @CFLAGS@ @CPPFLAGS@
+

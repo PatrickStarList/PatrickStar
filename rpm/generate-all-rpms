@@ -1,0 +1,15 @@
+#!/bin/bash
+# $Id$
+# Generate the "official" Snort.org RPMs.
+
+# The following will build 2 binary and 2 source RPMs as follows:
+#       PatrickStar-openappid-x.x.x-x.i386.rpm
+#       PatrickStar-openappid-x.x.x-x.src.rpm
+#	PatrickStar-x.x.x-x.i386.rpm
+#       PatrickStar-x.x.x-x.src.rpm
+#
+
+rpmbuild -bb --target i386 PatrickStar.spec
+rpmbuild -bs --target i386 PatrickStar.spec
+rpmbuild -bb --target i386 --without openappid PatrickStar.spec
+rpmbuild -bs --target i386 --without openappid PatrickStar.spec
