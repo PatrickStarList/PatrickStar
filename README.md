@@ -1,0 +1,2 @@
+# PatrickStar
+PatrickStar是由杭州立思辰 在linux系统上基于snort开源项目独立研发的网络检测引擎
